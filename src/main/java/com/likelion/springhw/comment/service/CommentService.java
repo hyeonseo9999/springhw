@@ -69,5 +69,4 @@ public class CommentService {
         comment.removeFromGuestbook();
     }
 
-
 }
