@@ -51,7 +51,6 @@ public class CommentService {
             return null;
         }
 
-        // 조회한 엔티티의 변경은 트랜잭션이 끝날 때 변경 감지로 반영됩니다.
         comment.update(request.getContent());
         return new CommentResponse(comment);
     }
@@ -67,7 +66,6 @@ public class CommentService {
             return;
         }
 
-        // 컬렉션에서 제거한 댓글은 orphanRemoval로 삭제합니다.
         comment.removeFromGuestbook();
     }
 
